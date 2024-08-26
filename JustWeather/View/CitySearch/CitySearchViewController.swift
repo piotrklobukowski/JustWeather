@@ -6,15 +6,18 @@
 //
 
 import UIKit
+import SnapKit
 
 class CitySearchViewController: UIViewController {
 
+    let tableView = UITableView()
     let searchViewController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBarAppearance()
         setupSearchViewController()
+        setupTableView()
     }
     
     private func setupNavigationBarAppearance() {
@@ -26,6 +29,13 @@ class CitySearchViewController: UIViewController {
         searchViewController.searchBar.placeholder = Constants.searchBarPlaceholder
         searchViewController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController = searchViewController
+    }
+    
+    private func setupTableView() {
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
 }
 
