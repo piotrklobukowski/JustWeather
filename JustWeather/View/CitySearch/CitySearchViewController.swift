@@ -9,21 +9,27 @@ import UIKit
 
 class CitySearchViewController: UIViewController {
 
+    let searchViewController = UISearchController(searchResultsController: nil)
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupNavigationBarAppearance()
+        setupSearchViewController()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupNavigationBarAppearance() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "JustWeather"
     }
-    */
+    
+    private func setupSearchViewController() {
+        searchViewController.searchBar.placeholder = "Type city name here"
+        searchViewController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = searchViewController
+    }
+}
 
+extension CitySearchViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+    }
 }
