@@ -15,6 +15,7 @@
 		23E5FBC92C7A8E050081F6F3 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5FBC82C7A8E050081F6F3 /* MainCoordinator.swift */; };
 		23E5FBDC2C7D09350081F6F3 /* CitySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5FBDB2C7D09350081F6F3 /* CitySearchViewController.swift */; };
 		23E5FBEA2C7D15380081F6F3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 23E5FBE92C7D15380081F6F3 /* SnapKit */; };
+		23E5FBED2C7D1D570081F6F3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5FBEC2C7D1D570081F6F3 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		23E5FBC62C7A8D3C0081F6F3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		23E5FBC82C7A8E050081F6F3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		23E5FBDB2C7D09350081F6F3 /* CitySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchViewController.swift; sourceTree = "<group>"; };
+		23E5FBEC2C7D1D570081F6F3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		23E5FBB02C7A68BE0081F6F3 /* JustWeather */ = {
 			isa = PBXGroup;
 			children = (
+				23E5FBEB2C7D1D1C0081F6F3 /* Utilities */,
 				23E5FBD92C7D09050081F6F3 /* View */,
 				23E5FBC52C7A8D280081F6F3 /* Coordinators */,
 				23E5FBB12C7A68BE0081F6F3 /* AppDelegate.swift */,
@@ -94,6 +97,14 @@
 				23E5FBDB2C7D09350081F6F3 /* CitySearchViewController.swift */,
 			);
 			path = CitySearch;
+			sourceTree = "<group>";
+		};
+		23E5FBEB2C7D1D1C0081F6F3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				23E5FBEC2C7D1D570081F6F3 /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 				23E5FBDC2C7D09350081F6F3 /* CitySearchViewController.swift in Sources */,
 				23E5FBC92C7A8E050081F6F3 /* MainCoordinator.swift in Sources */,
 				23E5FBB42C7A68BE0081F6F3 /* SceneDelegate.swift in Sources */,
+				23E5FBED2C7D1D570081F6F3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,11 +19,11 @@ class CitySearchViewController: UIViewController {
     
     private func setupNavigationBarAppearance() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        title = "JustWeather"
+        title = Constants.navigationBarTitle
     }
     
     private func setupSearchViewController() {
-        searchViewController.searchBar.placeholder = "Type city name here"
+        searchViewController.searchBar.placeholder = Constants.searchBarPlaceholder
         searchViewController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController = searchViewController
     }
