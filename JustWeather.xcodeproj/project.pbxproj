@@ -14,6 +14,7 @@
 		23E5FBC72C7A8D3C0081F6F3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5FBC62C7A8D3C0081F6F3 /* Coordinator.swift */; };
 		23E5FBC92C7A8E050081F6F3 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5FBC82C7A8E050081F6F3 /* MainCoordinator.swift */; };
 		23E5FBDC2C7D09350081F6F3 /* CitySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5FBDB2C7D09350081F6F3 /* CitySearchViewController.swift */; };
+		23E5FBEA2C7D15380081F6F3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 23E5FBE92C7D15380081F6F3 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E5FBEA2C7D15380081F6F3 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +112,9 @@
 			dependencies = (
 			);
 			name = JustWeather;
+			packageProductDependencies = (
+				23E5FBE92C7D15380081F6F3 /* SnapKit */,
+			);
 			productName = JustWeather;
 			productReference = 23E5FBAE2C7A68BE0081F6F3 /* JustWeather.app */;
 			productType = "com.apple.product-type.application";
@@ -138,6 +143,9 @@
 				Base,
 			);
 			mainGroup = 23E5FBA52C7A68BE0081F6F3;
+			packageReferences = (
+				23E5FBE82C7D15380081F6F3 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 23E5FBAF2C7A68BE0081F6F3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -389,6 +397,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		23E5FBE82C7D15380081F6F3 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		23E5FBE92C7D15380081F6F3 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23E5FBE82C7D15380081F6F3 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 23E5FBA62C7A68BE0081F6F3 /* Project object */;
 }
