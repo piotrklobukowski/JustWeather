@@ -16,7 +16,18 @@
 		23E5FBDC2C7D09350081F6F3 /* CitySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5FBDB2C7D09350081F6F3 /* CitySearchViewController.swift */; };
 		23E5FBEA2C7D15380081F6F3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 23E5FBE92C7D15380081F6F3 /* SnapKit */; };
 		23E5FBED2C7D1D570081F6F3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5FBEC2C7D1D570081F6F3 /* Constants.swift */; };
+		23E5FBF52C7E29B20081F6F3 /* JustWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5FBF42C7E29B20081F6F3 /* JustWeatherTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		23E5FBF62C7E29B20081F6F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23E5FBA62C7A68BE0081F6F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23E5FBAD2C7A68BE0081F6F3;
+			remoteInfo = JustWeather;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		23E5FBAE2C7A68BE0081F6F3 /* JustWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +40,8 @@
 		23E5FBC82C7A8E050081F6F3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		23E5FBDB2C7D09350081F6F3 /* CitySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchViewController.swift; sourceTree = "<group>"; };
 		23E5FBEC2C7D1D570081F6F3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		23E5FBF22C7E29B20081F6F3 /* JustWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23E5FBF42C7E29B20081F6F3 /* JustWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustWeatherTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +53,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		23E5FBEF2C7E29B20081F6F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -47,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				23E5FBB02C7A68BE0081F6F3 /* JustWeather */,
+				23E5FBF32C7E29B20081F6F3 /* JustWeatherTests */,
 				23E5FBAF2C7A68BE0081F6F3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				23E5FBAE2C7A68BE0081F6F3 /* JustWeather.app */,
+				23E5FBF22C7E29B20081F6F3 /* JustWeatherTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +129,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		23E5FBF32C7E29B20081F6F3 /* JustWeatherTests */ = {
+			isa = PBXGroup;
+			children = (
+				23E5FBF42C7E29B20081F6F3 /* JustWeatherTests.swift */,
+			);
+			path = JustWeatherTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,6 +160,24 @@
 			productReference = 23E5FBAE2C7A68BE0081F6F3 /* JustWeather.app */;
 			productType = "com.apple.product-type.application";
 		};
+		23E5FBF12C7E29B20081F6F3 /* JustWeatherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23E5FBF82C7E29B20081F6F3 /* Build configuration list for PBXNativeTarget "JustWeatherTests" */;
+			buildPhases = (
+				23E5FBEE2C7E29B20081F6F3 /* Sources */,
+				23E5FBEF2C7E29B20081F6F3 /* Frameworks */,
+				23E5FBF02C7E29B20081F6F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23E5FBF72C7E29B20081F6F3 /* PBXTargetDependency */,
+			);
+			name = JustWeatherTests;
+			productName = JustWeatherTests;
+			productReference = 23E5FBF22C7E29B20081F6F3 /* JustWeatherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -142,6 +190,10 @@
 				TargetAttributes = {
 					23E5FBAD2C7A68BE0081F6F3 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					23E5FBF12C7E29B20081F6F3 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 23E5FBAD2C7A68BE0081F6F3;
 					};
 				};
 			};
@@ -162,6 +214,7 @@
 			projectRoot = "";
 			targets = (
 				23E5FBAD2C7A68BE0081F6F3 /* JustWeather */,
+				23E5FBF12C7E29B20081F6F3 /* JustWeatherTests */,
 			);
 		};
 /* End PBXProject section */
@@ -173,6 +226,13 @@
 			files = (
 				23E5FBBB2C7A68BF0081F6F3 /* Assets.xcassets in Resources */,
 				23E5FBBE2C7A68BF0081F6F3 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23E5FBF02C7E29B20081F6F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +252,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		23E5FBEE2C7E29B20081F6F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23E5FBF52C7E29B20081F6F3 /* JustWeatherTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23E5FBF72C7E29B20081F6F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23E5FBAD2C7A68BE0081F6F3 /* JustWeather */;
+			targetProxy = 23E5FBF62C7E29B20081F6F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		23E5FBBC2C7A68BF0081F6F3 /* LaunchScreen.storyboard */ = {
@@ -387,6 +463,42 @@
 			};
 			name = Release;
 		};
+		23E5FBF92C7E29B20081F6F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pklobukowski.JustWeatherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JustWeather.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JustWeather";
+			};
+			name = Debug;
+		};
+		23E5FBFA2C7E29B20081F6F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pklobukowski.JustWeatherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JustWeather.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JustWeather";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -404,6 +516,15 @@
 			buildConfigurations = (
 				23E5FBC32C7A68BF0081F6F3 /* Debug */,
 				23E5FBC42C7A68BF0081F6F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23E5FBF82C7E29B20081F6F3 /* Build configuration list for PBXNativeTarget "JustWeatherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23E5FBF92C7E29B20081F6F3 /* Debug */,
+				23E5FBFA2C7E29B20081F6F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
