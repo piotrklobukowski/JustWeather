@@ -12,21 +12,25 @@ final class CitySearchViewModelTests: XCTestCase {
     
     var sut: CitySearchViewModel?
 
-    override func setUpWithError() throws {
-        sut = CitySearchViewModelImpl(apiClient: StubAPIClient())
-    }
-
     override func tearDownWithError() throws {
         sut = nil
     }
     
     func test_searchForCity_WhenInputIsValid_ShouldReturnCorrectNumberOfRows() {
+        sut = CitySearchViewModelImpl(apiClient: StubAPIClient(hasError: false))
         sut?.search(for: "London")
         XCTAssertEqual(sut?.numberOfRows(), 4)
+    }
+    
+    func test_searchForCity_WhenAPIErrorOccured_ShouldReturnOneAsNumberOfRows() {
+        sut = CitySearchViewModelImpl(apiClient: StubAPIClient(hasError: true))
+        sut?.search(for: "London")
+        XCTAssertEqual(sut?.numberOfRows(), 1)
     }
 }
 
 final class StubAPIClient: APIClient {
+    let hasError: Bool
     let data = [
         City(name: "London",
              localNames: ["en": "London",],
@@ -65,9 +69,17 @@ final class StubAPIClient: APIClient {
             )
     ]
     
+    init(hasError: Bool) {
+        self.hasError = hasError
+    }
+    
     func cities(for name: String) -> Result<[City], Error> {
-        return .success(data.filter { city in
-            city.name.contains(name)
-        })
+        if hasError {
+            return .failure(URLError(URLError.Code.notConnectedToInternet))
+        } else {
+            return .success(data.filter { city in
+                city.name.contains(name)
+            })
+        }
     }
 }

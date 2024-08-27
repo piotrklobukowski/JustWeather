@@ -9,6 +9,7 @@ import Foundation
 
 final class CitySearchViewModelImpl: CitySearchViewModel {
     private var cities: [City] = []
+    private var error: Error? = nil
     private let apiClient: APIClient
     
     init(apiClient: APIClient) {
@@ -17,10 +18,18 @@ final class CitySearchViewModelImpl: CitySearchViewModel {
     
     func search(for city: String) {
         let result = apiClient.cities(for: city)
-        cities = try! result.get()
+        do {
+            cities = try result.get()
+        } catch {
+            self.error = error
+        }
     }
     
     func numberOfRows() -> Int {
-        return cities.count
+        if error != nil {
+            return 1
+        } else {
+            return cities.count
+        }
     }
 }
