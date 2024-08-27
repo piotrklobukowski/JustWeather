@@ -21,6 +21,7 @@ class CitySearchViewController: UIViewController {
     }
     
     private func setupNavigationBarAppearance() {
+        navigationController?.navigationBar.backgroundColor = .red
         navigationController?.navigationBar.prefersLargeTitles = true
         title = Constants.navigationBarTitle
     }
@@ -33,6 +34,7 @@ class CitySearchViewController: UIViewController {
     
     private func setupTableView() {
         view.addSubview(tableView)
+        tableView.backgroundColor = .blue
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
