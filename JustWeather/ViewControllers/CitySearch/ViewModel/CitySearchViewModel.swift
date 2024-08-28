@@ -10,4 +10,5 @@ import Foundation
 protocol CitySearchViewModel {
     func search(for city: String)
     func numberOfRows() -> Int
+    func cellViewModel(for row: Int) -> CityTableViewCellViewModel
 }

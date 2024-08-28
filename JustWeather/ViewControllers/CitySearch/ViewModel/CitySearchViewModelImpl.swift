@@ -32,4 +32,8 @@ final class CitySearchViewModelImpl: CitySearchViewModel {
             return cities.count
         }
     }
+    
+    func cellViewModel(for row: Int) -> CityTableViewCellViewModel {
+        return CityTableViewCellViewModelImpl(city: cities[row])
+    }
 }

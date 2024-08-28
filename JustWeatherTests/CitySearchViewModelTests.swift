@@ -16,7 +16,7 @@ final class CitySearchViewModelTests: XCTestCase {
         sut = nil
     }
     
-    func test_searchForCity_WhenInputIsValid_ShouldReturnCorrectNumberOfRows() {
+    func test_searchForCity_WhenInputIsValid_ShouldReturnFourAsNumberOfRows() {
         sut = CitySearchViewModelImpl(apiClient: StubAPIClient(hasError: false))
         sut?.search(for: "London")
         XCTAssertEqual(sut?.numberOfRows(), 4)
@@ -26,6 +26,13 @@ final class CitySearchViewModelTests: XCTestCase {
         sut = CitySearchViewModelImpl(apiClient: StubAPIClient(hasError: true))
         sut?.search(for: "London")
         XCTAssertEqual(sut?.numberOfRows(), 1)
+    }
+    
+    func test_searchForCity_WhenInputIsValid_ShouldReturnCityNameCountryCodeAndStateForFirstResult() {
+        sut = CitySearchViewModelImpl(apiClient: StubAPIClient(hasError: false))
+        guard let sut else { fatalError("System under test hasn't set") }
+        sut.search(for: "London")
+        XCTAssertEqual(sut.cellViewModel(for: 0).text(), "London, GB, England")
     }
 }
 
@@ -60,12 +67,15 @@ final class StubAPIClient: APIClient {
              country: "US",
              state: "Kentucky"
             ),
-        City(name: "Warszawa",
-             localNames: ["pl": "Warszawa"],
+        City(name: "Warsaw",
+             localNames: [
+                "pl": "Warszawa",
+                "en": "Warsaw"
+                         ],
              latitude: 0.0,
              longitude: 0.0,
              country: "PL",
-             state: "Greater Poland Voivodeship"
+             state: "Masovian Voivodeship"
             )
     ]
     
